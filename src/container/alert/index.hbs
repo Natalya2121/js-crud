@@ -1,0 +1,18 @@
+{{! 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ }}
+
+<div class="alert_form">
+  <div class="alert__content">
+    <div class="alert__info">
+      <h1 class="alert__title">{{title}}</h1>
+      <h2 class="alert__message">{{info}}</h2>
+    </div>
+    <a href="/product-list" class="alert__button">Повернутись назад</a>
+  </div>
+</div>
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}

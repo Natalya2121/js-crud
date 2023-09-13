@@ -1,0 +1,90 @@
+@use '../../lib/service.scss' as s;
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: s.space(4);
+    gap: s.space(8);
+
+    &__title{
+        font-size: 32px;
+        font-weight: bold;
+        padding-bottom: s.space(1);
+        color: s.color('primary');
+    }
+    
+    &__title2 {
+        font-size: 20;
+    }
+
+    &__content {
+        display: grid;
+        gap: s.space(6);
+        padding: s.space(4);
+        // border: 1px solid s.color('light');
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.07);
+    }
+
+    &__content_col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: s.space(6);
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(2);
+    }
+
+    &__label {
+        font-size: 14px;      
+    }
+    
+    &__label_footer {
+        font-size: 14px;
+        color: s.color('light');      
+    }
+
+    &__input {
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 5px;
+    }
+
+    &__input_descript {
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 5px;
+        height: 60px;
+    }
+
+    &__button {
+        border: 1px solid s.color('light');
+        border-radius: 5px;
+        padding: s.space(2);
+        background-color: s.color('primary');
+        color: white;
+        transition: opacity 0.7s;
+    }
+    &__button:hover {
+        opacity: 0.7;
+      }
+      
+      &__button:active {
+        opacity: 0.3;
+      }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+}
+
+@media all and (width <= 550px) {
+    .form__content_col {
+        grid-template-columns: 1fr;
+    }}
