@@ -1,0 +1,11 @@
+{{#with data}}
+    <div class="product-list__item">
+        <strong class="product-list__item_title">{{name}}</strong>
+        <p class="product-list__item_descript">{{description}}</p>
+        <h3 class="product-list__item_id">ID: {{id}}</h3>
+        <div class="product-list__item_footer">
+            <strong class="product-list__item_price">{{price}}$</strong>
+            <a href="/product-edit?id={{id}}" class="product-list__item_button">Редагувати</a>
+        </div>
+    </div>
+{{/with}}
