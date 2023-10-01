@@ -1,0 +1,31 @@
+<main class="main">
+    {{#with data}}
+            {{> heading title="Інформація про замовлення"}}
+            {{> field label="ID:" name="id" value=purchase.id readonly=true}}
+
+            {{> divider}}
+
+            {{> field label="Ім'я" name="firstname" value=purchase.firstname readonly=true}}
+            {{> field label="Прізвище" name="lastname" value=purchase.lastname readonly=true}}
+            {{> field label="Телефон" name="phone" value=purchase.phone readonly=true}}
+            {{> field label="Пошта" name="email" value=purchase.email readonly=true}}
+
+            {{> divider}}
+
+            {{> field label="Назва товару" name="title" value=purchase.product.title readonly=true}}
+            {{> field label="Коментар" name="comment" value=purchase.comment readonly=true}}
+
+            {{> divider}}
+
+            {{> field label="Вартість товарів" value=purchase.productPrice name="productPrice" readonly=true}}
+            {{> field label="Вартість доставки" value=purchase.deliveryPrice name="deliveryPrice" readonly=true}}
+            {{> field label="Нараховані бонуси" value=purchase.bonus name="bonus" readonly=true}}
+            {{> field label="Сума до сплати" value=purchase.totalPrice name="totalPrice" readonly=true}}
+
+            {{> divider}}
+
+            <a href="/purchase-update?id={{purchase.id}}" class="purchase-info__button">Змінити дані</a>
+
+    {{/with}}
+
+</main>
