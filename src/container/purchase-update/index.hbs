@@ -1,0 +1,21 @@
+<main class="main">
+    {{#with data}}
+        <form method="POST" action="/purchase-submit-upd?id={{purchase.id}}" class="form-card">
+
+            {{> heading title="Зміна даних"}}
+
+            {{> field label="ID:" name="id" value=purchase.id readonly=true}}
+
+            {{> divider}}
+
+            {{> field label="Ім'я" name="firstname" value=purchase.firstname}}
+            {{> field label="Прізвище" name="lastname" value=purchase.lastname}}
+            {{> field label="Телефон" name="phone" value=purchase.phone}}
+            {{> field label="Пошта" name="email" value=purchase.email}}
+
+            {{> button text="Зберегти зміни"}}
+
+        </form>
+    {{/with}}
+
+</main>

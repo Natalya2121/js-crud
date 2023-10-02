@@ -6,10 +6,10 @@
 <div class="alert_form">
   <div class="alert__content">
     <div class="alert__info">
-      <h1 class="alert__title">{{title}}</h1>
-      <h2 class="alert__message">{{info}}</h2>
+      <h1 class="alert__title">{{data.message}}</h1>
+      <h2 class="alert__message">{{data.info}}</h2>
     </div>
-    <a href="/product-list" class="alert__button">Повернутись назад</a>
+    <a href="{{#if data.link}}{{data.link}}{{else}}/product-list{{/if}}" class="alert__button">Повернутись назад</a>
   </div>
 </div>
 {{! 
